@@ -1,0 +1,39 @@
+<html>
+<head>
+  <title>Pet Scores - All Scores</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Pet Scores - All Scores</h1>
+  <table>
+    <tr>
+      <td colspan="2">
+        <h2><center>Scores</center</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <form action="/all_scores" method="GET">
+          <label for="year">Choose a year:</label><br>
+          <select name="year" id="year_select">
+            {% for y in all_years %}
+                {% if y == year %}
+                  <option value="{{y}}" selected>{{y}}</option>
+                {% else %}
+                  <option value="{{y}}">{{y}}</option>
+                {% endif %}
+            {% endfor %}
+          </select>
+          <input type="submit" value="Submit">
+        <form>
+      </td>
+      <td>
+        {% include 'bar_chart.svg' %}
+      </td>
+    <tr>
+  <table>
+  <footer>
+    All data is completely fictional.
+  </footer>
+</body>
+</html>

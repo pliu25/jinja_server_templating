@@ -1,0 +1,23 @@
+<html>
+<head>
+  <title>Pet Scores - Welcome</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <h1>Welcome to Pet Scores!</h1>
+
+  <div>
+    What would you like to see?
+    <ul>
+      <li><a href="/all_scores">All scores for all pets</a></li>
+      {% for pet in pets %}
+        <li><a href="/scores/{{pet}}">{{pet[:-1].capitalize()}} Scores</a></li>
+      {% endfor %}
+    </ul>
+  </div>
+  <footer>
+    All data is completely fictional.
+  </footer>
+</body>
+</html>

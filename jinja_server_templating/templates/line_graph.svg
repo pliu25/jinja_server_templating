@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 300" width="75%" height="75%">
+
+  {% for point in endpoints %}
+    <line class="line" x1="{{60+loop.index0*90}}" y1="{{180-point[0]}}" x2="{{60+(loop.index0+1)*90}}" y2="{{180-point[1]}}" stroke-linecap="round"/>
+  {% endfor %}
+
+    <line class="axis" x1="10" y1="150" x2="375" y2="150" />
+
+ </svg>
